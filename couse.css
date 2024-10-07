@@ -1,0 +1,111 @@
+/* Reset margin dan padding default */
+*,
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pastikan website responsif di perangkat mobile */
+html, body {
+    height: 100%; /* Agar konten mengambil seluruh tinggi layar */
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVIGATION BAR */
+.container-navbar {
+    background-color: rgb(193, 193, 193);
+    width: 100%;
+    height: 8vh; /* Sesuaikan tinggi navbar agar teks lebih naik ke atas */
+    display: flex;
+    justify-content: center; /* Rata tengah secara horizontal */
+    align-items: center; /* Rata tengah secara vertikal */
+}
+
+.ul-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Gunakan 100% dari tinggi navbar */
+  padding: 0; /* Hilangkan padding pada ul */
+}
+
+.li-navbar {
+    list-style-type: none;
+    padding: 5px; /* Sesuaikan padding agar teks naik sedikit */
+    margin: 0 15px; /* Ruang antara item menu */
+    font-size: 18px; /* Mengubah ukuran font menjadi lebih kecil */
+    font-weight: normal; /* Mengatur agar teks tidak bold */
+    display: inline-block;
+    line-height: 1; /* Sesuaikan line-height agar teks naik */
+}
+
+.li-navbar:hover {
+    background-color: blue;
+    transition: .8s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 20px;
+}
+
+.a-navbar {
+    text-decoration: none;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: normal; /* Pastikan teks tidak bold */
+}
+
+/* Menambahkan responsivitas untuk perangkat kecil */
+@media (max-width: 768px) {
+    .li-navbar {
+        font-size: 16px; /* Ukuran teks lebih kecil untuk layar kecil */
+    }
+
+    .container-navbar {
+        height: 10vh; /* Sesuaikan tinggi navbar untuk perangkat mobile */
+    }
+}
+
+/* CONTENT */
+.container-content {
+    background-color: rgb(2, 236, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; /* Tinggi disesuaikan agar gambar menyesuaikan layar penuh */
+}
+
+.img-content {
+    max-width: 90%; /* Gambar akan menyesuaikan dengan layar */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.container-footer {
+    height: 10vh; /* Tinggi footer tetap */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-footer {
+    font-size: 2vw; /* Ukuran font diperbesar atau diperkecil sesuai kebutuhan */
+    text-align: center;
+    color: white;
+}
+
+/* Menambahkan responsivitas tambahan untuk layar kecil */
+@media (max-width: 768px) {
+    .li-navbar {
+        font-size: 5vw; /* Ukuran teks navbar tetap responsif */
+    }
+
+    .h1-footer {
+        font-size: 4vw; /* Ukuran font lebih kecil di layar kecil */
+    }
+
+    .container-navbar {
+        height: 12vh; /* Sesuaikan tinggi navbar untuk perangkat mobile */
+    }
+}
